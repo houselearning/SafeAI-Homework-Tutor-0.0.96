@@ -1,0 +1,852 @@
+FUNCTIONS DEFINED
+BY IMPROPER
+INTEGRALS
+William F. Trench
+Trinity University
+Trinity University
+Book: Functions Defined by Improper
+Integrals (Trench)
+William F. Trench
+This text is disseminated via the Open Education Resource (OER) LibreTexts Project
+(https://LibreTexts.org) and like the thousands of other texts available within this powerful platform, it is
+freely available for reading, printing, and "consuming."
+The LibreTexts mission is to bring together students, faculty, and scholars in a collaborative effort to
+provide an accessible, and comprehensive platform that empowers our community to develop, curate,
+adapt, and adopt openly licensed resources and technologies; through these efforts we can reduce the
+financial burden born from traditional educational resource costs, ensuring education is more accessible
+for students and communities worldwide.
+Most, but not all, pages in the library have licenses that may allow individuals to make changes, save,
+and print this book. Carefully consult the applicable license(s) before pursuing such effects. Instructors
+can adopt existing LibreTexts texts or Remix them to quickly build course-specific resources to meet the
+needs of their students. Unlike traditional textbooks, LibreTexts’ web based origins allow powerful
+integration of advanced features and new technologies to support learning.
+LibreTexts is the adaptable, user-friendly non-profit open education resource platform that educators
+trust for creating, customizing, and sharing accessible, interactive textbooks, adaptive homework, and
+ancillary materials. We collaborate with individuals and organizations to champion open education
+initiatives, support institutional publishing programs, drive curriculum development projects, and more.
+The LibreTexts libraries are Powered by NICE CXone Expert and was supported by the Department of
+Education Open Textbook Pilot Project, the California Education Learning Lab, the UC Davis Office of
+the Provost, the UC Davis Library, the California State University Affordable Learning Solutions
+Program, and Merlot. This material is based upon work supported by the National Science Foundation
+under Grant No. 1246120, 1525057, and 1413739.
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the
+author(s) and do not necessarily reflect the views of the National Science Foundation nor the US
+Department of Education.
+Have questions or comments? For information about adoptions or adaptions contact
+info@LibreTexts.org or visit our main website at https://LibreTexts.org.
+This text was compiled on 02/01/2026
+1 https://math.libretexts.org/@go/page/126556
+TABLE OF CONTENTS
+Licensing
+1: Chapters
+1.1: Introduction to Improper Functions
+1.2: Preparation
+1.3: Uniform convergence of improper integrals
+1.4: Absolutely Uniformly Convergent Improper Integrals
+1.5: Dirichlet’s Tests
+1.6: Consequences of Uniform Convergence
+1.7: Applications to Laplace transforms
+1.8: Improper Functions (Exercises)
+Index
+Glossary
+Detailed Licensing
+1 https://math.libretexts.org/@go/page/126557
+Licensing
+A detailed breakdown of this resource's licensing can be found in Back Matter/Detailed Licensing.
+1
+CHAPTER OVERVIEW
+1: Chapters
+1.1: Introduction to Improper Functions
+1.2: Preparation
+1.3: Uniform convergence of improper integrals
+1.4: Absolutely Uniformly Convergent Improper Integrals
+1.5: Dirichlet’s Tests
+1.6: Consequences of Uniform Convergence
+1.7: Applications to Laplace transforms
+1.8: Improper Functions (Exercises)
+This page titled 1: Chapters is shared under a not declared license and was authored, remixed, and/or curated by William F. Trench via source
+content that was edited to the style and standards of the LibreTexts platform.
+1.1.1 https://math.libretexts.org/@go/page/17326
+1.1: Introduction to Improper Functions
+In Section 7.2 (pp. 462–484) we considered functions of the form
+We saw that if is continuous on , then is continuous on (Exercise 7.2.3, p. 481) and that we can reverse the
+order of integration in
+to evaluate it as
+(Corollary 7.2.3, p. 466).
+Here is another important property of .
+[theorem:1] If and are continuous on then
+is continuously differentiable on and can be obtained by differentiating [eq:1] under the integral sign with respect to
+that is,
+Here and are derivatives from the right and and are derivatives from the left
+If and are in and , then
+From the mean value theorem (Theorem 2.3.11, p. 83), if and , , there is a between and such
+that
+From this and [eq:3],
+Now suppose . Since is uniformly continuous on the compact set (Corollary 5.2.14, p. 314) and is between
+ and , there is a such that if then
+This and [eq:4] imply that
+if and are in and . This implies [eq:2]. Since the integral in [eq:2] is continuous on (Exercise 7.2.3, p.
+481, with replaced by ), is continuous on .
+1.1.2 https://math.libretexts.org/@go/page/17326
+[example:1] Since
+are continuous for all , Theorem [theorem:1] implies that if
+then
+(In applying Theorem [theorem:1] for a specific value of , we take , where .) This provides a convenient
+way to evaluate the integral in [eq:6]: integrating the right side of [eq:5] with respect to yields
+Differentiating this and using [eq:6] yields
+To verify this, use integration by parts.
+We will study the continuity, differentiability, and integrability of
+where is an interval or a union of intervals, and is a convergent improper integral for each . If the domain of is
+where , we say that is pointwise convergent on or simply convergent on , and write
+if, for each and every , there is an (which also depends on ) such that
+If the domain of is where , we replace [eq:7] by
+and [eq:8] by
+In general, pointwise convergence of for all does not imply that is continuous or integrable on , and the additional
+assumptions that is continuous and converges do not imply [eq:2].
+[example:2] The function
+is continuous on and
+converges for all , with
+1.1.3 https://math.libretexts.org/@go/page/17326
+therefore, is discontinuous at .
+[example:3] The function
+is continuous on . Let
+Then
+However,
+so
+This page titled 1.1: Introduction to Improper Functions is shared under a CC BY-NC-SA 3.0 license and was authored, remixed, and/or curated
+by William F. Trench via source content that was edited to the style and standards of the LibreTexts platform.
+1.2.1 https://math.libretexts.org/@go/page/17325
+1.2: Preparation
+We begin with two useful convergence criteria for improper integrals that do not involve a parameter. Consistent with the definition
+on p. 152, we say that is locally integrable on an interval if it is integrable on every finite closed subinterval of .
+[theorem:2] Suppose is locally integrable on and denote
+Then the improper integral converges if and only if for each there is an such that
+For necessity, suppose . By definition, this means that for each there is an such that
+Therefore
+For sufficiency, [eq:9] implies that
+. Since is also bounded on the compact set (Theorem 5.2.11, p. 313), is bounded on . Therefore the
+monotonic functions
+are well defined on , and
+both exist and are finite (Theorem 2.1.11, p. 47). From [eq:9],
+so
+Since is an arbitrary positive number, this implies that
+so . Let . Since
+it follows that .
+We leave the proof of the following theorem to you (Exercise [exer:2]).
+[theorem:3] Suppose is locally integrable on and denote
+Then the improper integral converges if and only if for each there is an such that
+1.2.2 https://math.libretexts.org/@go/page/17325
+To see why we associate Theorems [theorem:2] and [theorem:3] with Cauchy, compare them with Theorem 4.3.5 (p. 204)
+This page titled 1.2: Preparation is shared under a CC BY-NC-SA 3.0 license and was authored, remixed, and/or curated by William F. Trench via
+source content that was edited to the style and standards of the LibreTexts platform.
+1.3.1 https://math.libretexts.org/@go/page/17324
+1.3: Uniform convergence of improper integrals
+Henceforth we deal with functions with domains , where is an interval or a union of intervals and is of one of
+the following forms:
+ with ;
+ with ;
+ with .
+In all cases it is to be understood that is locally integrable with respect to on . When we say that the improper integral
+ has a stated property “on S” we mean that it has the property for every .
+[definition:1] If the improper integral
+converges on it is said to converge uniformly (or be uniformly convergent) on if for each there is an such that
+or equivalently
+The crucial difference between pointwise and uniform convergence is that in [eq:8] may depend upon the particular value of
+, while the in [eq:11] does not: one choice must work for all . Thus, uniform convergence implies pointwise convergence,
+but pointwise convergence does not imply uniform convergence.
+(Cauchy Criterion for Uniform Convergence I) [theorem:4] The improper integral in [eq:10] converges uniformly on if and only
+if for each there is an such that
+Suppose converges uniformly on and . From Definition [definition:1], there is an such that
+Since
+[eq:13] and the triangle inequality imply [eq:12].
+For the converse, denote
+Since [eq:12] implies that
+Theorem [theorem:2] with ( fixed but arbitrary in ) implies that converges pointwise for .
+Therefore, if then, for each , there is an such that
+1.3.2 https://math.libretexts.org/@go/page/17324
+For each , choose . (Recall [eq:14]). Then
+so [eq:12], [eq:15], and the triangle inequality imply that
+In practice, we don’t explicitly exhibit for each given . It suffices to obtain estimates that clearly imply its existence.
+[example:4] For the improper integral of Example [example:2],
+If , then
+so converges uniformly on if ; however, it does not converge uniformly on any neighborhood of
+, since, for any , if is sufficiently small.
+[definition:2] If the improper integral
+converges on it is said to converge uniformly (or be uniformly convergent) on if for each there is an such that
+or equivalently
+We leave proof of the following theorem to you (Exercise [exer:3]).
+(Cauchy Criterion for Uniform Convergence II) [theorem:5] The improper integral
+converges uniformly on if and only if for each there is an such that
+We need one more definition, as follows.
+[definition:3] Let be defined on where Suppose is locally integrable on for all
+and let be an arbitrary point in Then is said to converge uniformly on if and both
+converge uniformly on
+We leave it to you (Exercise [exer:4]) to show that this definition is independent of ; that is, if and both
+converge uniformly on for some , then they both converge uniformly on for every .
+We also leave it you (Exercise [exer:5]) to show that if is bounded on and exists as a proper integral for
+each , then it converges uniformly on according to all three Definitions [definition:1]–[definition:3].
+[example:5] Consider the improper integral
+1.3.3 https://math.libretexts.org/@go/page/17324
+which diverges if (verify). Definition [definition:3] applies if , so we consider the improper integrals
+separately. Moreover, we could just as well define
+where is any positive number.
+Definition [definition:2] applies to . If and , then
+so converges for uniformly on .
+Definition [definition:1] applies to . Since
+ converges uniformly on if . It does not converge uniformly on , since the change of variable yields
+which, for any fixed , can be made arbitrarily large by taking sufficiently small and . Therefore we conclude that
+converges uniformly on if
+Note that that the constant in [eq:16] plays no role in this argument.
+[example:6] Suppose we take
+as given (Exercise [exer:31](b)). Substituting with yields
+What about uniform convergence? Since is continuous at , Definition [definition:1] and Theorem [theorem:4] apply
+here. If and , then
+Therefore [eq:18] converges uniformly on if . On the other hand, from [eq:17], there is a such that
+This and [eq:18] imply that
+for any if . Hence, [eq:18] does not converge uniformly on any interval with .
+1.3.4 https://math.libretexts.org/@go/page/17324
+This page titled 1.3: Uniform convergence of improper integrals is shared under a CC BY-NC-SA 3.0 license and was authored, remixed, and/or
+curated by William F. Trench via source content that was edited to the style and standards of the LibreTexts platform.
+1.4.1 https://math.libretexts.org/@go/page/17323
+1.4: Absolutely Uniformly Convergent Improper Integrals
+(Absolute Uniform Convergence I) [definition:4] The improper integral
+is said to converge absolutely uniformly on if the improper integral
+converges uniformly on ; that is, if, for each , there is an such that
+To see that this definition makes sense, recall that if is locally integrable on for all in , then so is (Theorem 3.4.9, p.
+161). Theorem [theorem:4] with replaced by implies that converges absolutely uniformly on if and only if, for
+each , there is an such that
+Since
+Theorem [theorem:4] implies that if converges absolutely uniformly on then it converges uniformly on .
+[theorem:6] ( Weierstrass’s Test for Absolute Uniform Convergence I) Suppose is nonnegative on
+and
+Then converges absolutely uniformly on
+Denote . By definition, for each there is an such that
+Therefore, if then
+This and [eq:19] imply that
+Now Theorem [theorem:4] implies the stated conclusion.
+[example:7] Suppose is locally integrable on for all and, for some , there are constants and such
+that
+If and , then
+1.4.2 https://math.libretexts.org/@go/page/17323
+so converges absolutely on . For example, since
+for sufficiently large if , Theorem [theorem:4] implies that and converge absolutely
+uniformly on if and . As a matter of fact, converges absolutely on if and
+. (Why?)
+(Absolute Uniform Convergence II) [definition:5] The improper integral
+is said to converge absolutely uniformly on if the improper integral
+converges uniformly on ; that is, if, for each , there is an such that
+We leave it to you (Exercise [exer:7]) to prove the following theorem.
+[theorem:7] (Weierstrass’s Test for Absolute Uniform Convergence II) Suppose is nonnegative on
+and
+Then converges absolutely uniformly on .
+[example:8] If is locally integrable on for all and
+for each , then
+converges absolutely uniformly on if . To see this, note that if , then
+Applying this with shows that
+converges absolutely uniformly on if and
+converges absolutely uniformly on if .
+By recalling Theorem 4.4.15 (p. 246), you can see why we associate Theorems [theorem:6] and [theorem:7] with Weierstrass.
+1.4.3 https://math.libretexts.org/@go/page/17323
+This page titled 1.4: Absolutely Uniformly Convergent Improper Integrals is shared under a CC BY-NC-SA 3.0 license and was authored,
+remixed, and/or curated by William F. Trench via source content that was edited to the style and standards of the LibreTexts platform.
+1.5.1 https://math.libretexts.org/@go/page/17322
+1.5: Dirichlet’s Tests
+Weierstrass’s test is useful and important, but it has a basic shortcoming: it applies only to absolutely uniformly convergent
+improper integrals. The next theorem applies in some cases where converges uniformly on , but does
+not.
+[theorem:8] (Dirichlet’s Test for Uniform Convergence I) If and are continuous on then
+converges uniformly on if the following conditions are satisfied:
+There is a constant such that
+ converges uniformly on
+If
+then integration by parts yields
+Since assumption (b) and [eq:20] imply that , Eqn. [eq:21] implies that
+on .
+Now suppose . From assumption (a), there is an such that on if . From assumption (c) and
+Theorem [theorem:6], there is an such that
+Therefore [eq:22] implies that
+Now Theorem [theorem:4] implies the stated conclusion.
+The statement of this theorem is complicated, but applying it isn’t; just look for a factorization , where has a bounded
+antderivative on and is “small” near . Then integrate by parts and hope that something nice happens. A similar comment
+applies to Theorem 9, which follows.
+1.5.2 https://math.libretexts.org/@go/page/17322
+Add text here.
+Solution
+Add text here.
+Let
+The obvious inequality
+is useless here, since
+However, integration by parts yields
+Therefore, if , then
+if . Now Theorem [theorem:4] implies that converges uniformly on if .
+We leave the proof of the following theorem to you (Exercise [exer:10]).
+[theorem:9] (Dirichlet’s Test for Uniform Convergence II) If and are continuous on then
+converges uniformly on if the following conditions are satisfied:
+There is a constant such that
+ converges uniformly on .
+By recalling Theorems 3.4.10 (p. 163), 4.3.20 (p. 217), and 4.4.16 (p. 248), you can see why we associate Theorems [theorem:8]
+and [theorem:9] with Dirichlet.
+This page titled 1.5: Dirichlet’s Tests is shared under a CC BY-NC-SA 3.0 license and was authored, remixed, and/or curated by William F.
+Trench via source content that was edited to the style and standards of the LibreTexts platform.
+ Example
+1.6.1 https://math.libretexts.org/@go/page/17327
+1.6: Consequences of Uniform Convergence
+[theorem:10] If is continuous on either or and
+converges uniformly on then is continuous on Moreover
+We will assume that is continuous on . You can consider the other case (Exercise [exer:14]).
+We will first show that in [eq:23] is continuous on . Since converges uniformly on , Definition [definition:1]
+(specifically, [eq:11]) implies that if , there is an such that
+Therefore, if , then
+so
+Since is uniformly continuous on the compact set (Corollary 5.2.14, p. 314), there is a such that
+if and are in and . This and [eq:25] imply that
+if and are in and . Therefore is continuous on , so the integral on left side of [eq:24] exists. Denote
+We will show that the improper integral on the right side of [eq:24] converges to . To this end, denote
+Since we can reverse the order of integration of the continuous function over the rectangle (Corollary 7.2.2, p. 466),
+From this and [eq:26],
+Now suppose . Since converges uniformly on , there is an such that
+1.6.2 https://math.libretexts.org/@go/page/17327
+so if . Hence,
+which completes the proof of [eq:24].
+[example:10] It is straightforward to verify that
+and the convergence is uniform on if . Therefore Theorem [theorem:10] implies that if , then
+Since
+it follows that
+[example:11] From Example [example:6],
+and the convergence is uniform on if . Therefore, Theorem [theorem:10] implies that if , then
+The last integral converges uniformly on (Exercise 10(h)), and is therefore continuous with respect to on , by
+Theorem [theorem:10]; in particular, we can let in [eq:27] and replace by to obtain
+The next theorem is analogous to Theorem 4.4.20 (p. 252).
+[theorem:11] Let and be continuous on either or Suppose that the improper integral
+converges for some and
+converges uniformly on Then converges uniformly on and is given explicitly by
+1.6.3 https://math.libretexts.org/@go/page/17327
+Moreover, is continuously differentiable on ; specifically,
+where and are derivatives from the right, and and are derivatives from the left
+We will assume that and are continuous on . You can consider the other case (Exercise [exer:15]).
+Let
+Since and are continuous on , Theorem [theorem:1] implies that
+Then
+Therefore,
+Now suppose . Since we have assumed that exists, there is an in such that
+Since we have assumed that converges for , there is an such that
+Therefore, [eq:29] yields
+if and . Therefore converges uniformly on and
+Since is continuous on by Theorem [theorem:10], [eq:28] follows from differentiating this (Theorem 3.3.11, p. 141).
+[example:12] Let
+Since
+1.6.4 https://math.libretexts.org/@go/page/17327
+it follows that
+and the convergence is uniform on if (Exercise [exer:8](i)). To evaluate the last integral, denote ; then
+Transforming to polar coordinates , yields
+Therefore
+Differentiating this times with respect to yields
+where Theorem [theorem:11] justifies the differentiation for every , since all these integrals converge uniformly on if
+(Exercise [exer:8](i)).
+Some advice for applying this theorem: Be sure to check first that converges for at least one value of . If so,
+differentiate formally to obtain . Then if is in some interval on which this improper
+integral converges uniformly.
+This page titled 1.6: Consequences of Uniform Convergence is shared under a CC BY-NC-SA 3.0 license and was authored, remixed, and/or
+curated by William F. Trench via source content that was edited to the style and standards of the LibreTexts platform.
+1.7.1 https://math.libretexts.org/@go/page/17328
+1.7: Applications to Laplace transforms
+The Laplace transform of a function locally integrable on is
+for all such that integral converges. Laplace transforms are widely applied in mathematics, particularly in solving differential
+equations.
+We leave it to you to prove the following theorem (Exercise [exer:26]).
+[theorem:12] Suppose is locally integrable on and for sufficiently large . Then the Laplace transform of
+converges uniformly on if .
+[theorem:13] If is continuous on and is bounded on then the Laplace transform of
+converges uniformly on if
+If ,
+Integration by parts yields
+Therefore, if , then
+Now Theorem [theorem:4] implies that converges uniformly on .
+The following theorem draws a considerably stonger conclusion from the same assumptions.
+[theorem:14] If is continuous on and
+is bounded on then the Laplace transform of is infinitely differentiable on with
+that is, the -th derivative of the Laplace transform of is the Laplace transform of .
+First we will show that the integrals
+all converge uniformly on if . If , then
+Integrating by parts yields
+1.7.2 https://math.libretexts.org/@go/page/17328
+where indicates differentiation with respect to . Therefore, if on , then
+Therefore, since decreases monotonically on if (check!),
+so Theorem [theorem:4] implies that converges uniformly if . Now Theorem [theorem:11] implies that
+, and an easy induction proof yields [eq:30] (Exercise [exer:25]).
+[example:13] Here we apply Theorem [theorem:12] with ( ) and . Since
+is bounded on , Theorem [theorem:12] implies that
+converges and
+(Note that this is also true if .) Elementary integration yields
+Hence, from [eq:31],
+This page titled 1.7: Applications to Laplace transforms is shared under a CC BY-NC-SA 3.0 license and was authored, remixed, and/or curated
+by William F. Trench via source content that was edited to the style and standards of the LibreTexts platform.
+1.8.1 https://math.libretexts.org/@go/page/17329
+1.8: Improper Functions (Exercises)
+[exer:1] Suppose and are differentiable on , with
+Let and be continuous on . Derive Liebniz’s rule:
+(Hint: Define and use the chain rule.)
+[exer:2] Adapt the proof of Theorem [theorem:2] to prove Theorem [theorem:3].
+[exer:3] Adapt the proof of Theorem [theorem:4] to prove Theorem [theorem:5].
+[exer:4] Show that Definition [definition:3] is independent of ; that is, if and both converge uniformly on
+ for some , then they both converge uniformly on and every .
+[exer:5]
+()0pt0pt14pt 8pt22pt0pt
+Show that if is bounded on and exists as a proper integral for each , then it converges uniformly
+on according to all of Definition [definition:1]–[definition:3].
+Give an example to show that the boundedness of is essential in (a).
+[exer:6] Working directly from Definition [definition:1], discuss uniform convergence of the following integrals:
+(a) (b)
+(c) (d)
+(e) (f)
+[exer:7] Adapt the proof of Theorem [theorem:6] to prove Theorem [theorem:7].
+[exer:8] Use Weierstrass’s test to show that the integral converges uniformly on
+()0pt0pt14pt 8pt22pt0pt
+, ,
+, ,
+, ,
+, ,
+, , .
+, ,
+1.8.2 https://math.libretexts.org/@go/page/17329
+, ,
+,
+, , , , , ,…
+[exer:9]
+()0pt0pt14pt 8pt22pt0pt
+Show that
+converges if , and uniformly on if .
+Use integration by parts to show that
+and then show by induction that
+How can this be used to define in a natural way for all , , , …? (This function is called the gamma function.)
+Show that if is a positive integer.
+Show that
+[exer:10] Show that Theorem [theorem:8] remains valid with assumption (c) replaced by the assumption that is monotonic
+with respect to for all .
+[exer:11] Adapt the proof of Theorem [theorem:8] to prove Theorem [theorem:9].
+[exer:12] Use Dirichlet’s test to show that the following integrals converge uniformly on if :
+(a) (b)
+(c) (d)
+[exer:13] Suppose and are continuous on and denote Suppose also that
+converges uniformly on Show that converges uniformly on .
+[exer:14] Prove Theorem [theorem:10] for the case where is continuous on .
+[exer:15] Prove Theorem [theorem:11] for the case where is continuous on .
+[exer:16] Show that
+1.8.3 https://math.libretexts.org/@go/page/17329
+are continuous on if
+[exer:17] Suppose is continuously differentiable on , , and
+Show that the functions
+are continuous for all . Give an example showing that they need not be continuous at .
+[exer:18] Evaluate and use Theorem [theorem:11] to evaluate :
+()0pt0pt14pt 8pt22pt0pt
+, ; , ,
+, ; , ,
+,
+, ,
+,
+, ,
+;
+;
+[exer:19] Use Theorem [theorem:11] to evaluate:
+()0pt0pt14pt 8pt22pt0pt
+, , , , ,….
+, , , , , ….
+, , , , ,….
+, .
+[exer:20]
+()0pt0pt14pt 8pt22pt0pt
+Use Theorem [theorem:11] and integration by parts to show that
+satisfies
+1.8.4 https://math.libretexts.org/@go/page/17329
+Use part (a) to show that
+[exer:21] Show that
+(Hint: See Exercise [exer:20].)
+[exer:22] State a condition implying that
+are times differentiable on for all . (Your condition should imply the hypotheses of Exercise [exer:16].)
+[exer:23] Suppose is continuously differentiable on ,
+and . Show that if
+then
+.
+[exer:24] Differentiating
+under the integral sign yields
+which converges uniformly on any finite interval. (Why?) Does this imply that is differentiable for all ?
+[exer:25] Show that Theorem [theorem:11] and induction imply Eq. [eq:30].
+[exer:26] Prove Theorem [theorem:12].
+[exer:27] Show that if converges for , then it converges uniformly on . (What’s the difference
+between this and Theorem [theorem:13]?)
+[exer:28] Prove: If is continuous on and converges, then
+(Hint: See the proof of Theorem 4.5.12, p. 273.)
+[exer:29] Under the assumptions of Exercise [exer:28], show that
+[exer:30] Suppose is continuous on and
+1.8.5 https://math.libretexts.org/@go/page/17329
+converges for . Show that . (Hint: Integrate by parts.)
+[exer:31]
+()0pt0pt14pt 8pt22pt0pt
+Starting from the result of Exercise [exer:18](d), let and invoke Exercise [exer:30] to evaluate
+Use (a) and Exercise [exer:28] to show that
+[exer:32]
+()0pt0pt14pt 8pt22pt0pt
+Suppose is continuously differentiable on and
+Show that
+converges uniformly on if . (Hint: Integrate by parts.)
+Show from part (a) that
+converges uniformly on if . (Notice that this does not follow from Theorem [theorem:6] or [theorem:8].)
+[exer:33] Suppose is continuous on ,
+exists, and
+converges for . Show that
+Answers to selected exercises
+If for and , then does not converge uniformly on for any .
+, (d), and (e) converge uniformly on if ; (b), (c), and (f) converge uniformly on if .
+Let and . Then and , while if .
+; ;
+;
+1.8.6 https://math.libretexts.org/@go/page/17329
+(d) ;
+(e) ;
+(f) ;
+(c) (d)
+No; the integral defining diverges for all .
+
+Beginning of manual
+1. If then
+and, by Theorem 1, . If
+then
+2. Theorem 3 (Cauchy Criterion for Convergence of an Improper Integral II) Suppose is integrable on every finite closed
+subinterval of and denote
+Then the improper integral converges if and only if for each there is an such that
+For necessity, suppose . By definition, this means that for each there is an such that
+Therefore,
+For sufficiency, (A) implies that
+. Since is also bounded on the compact set (Theorem 5.2.11, p. 313), is bounded on . Therefore the
+monotonic functions
+are well defined on , and
+1.8.7 https://math.libretexts.org/@go/page/17329
+both exist and are finite (Theorem 2.1.11, p. 47). From (A),
+so . Since is an arbitrary positive number, this implies that
+so . Let . Since
+it follows that .
+3. Theorem 5 (Cauchy Criterion for Uniform Convergence II) The improper integral
+converges uniformly on if and only if for each there is an such that
+Suppose converges uniformly on and . From Definition 2, there is an such that
+Since
+(B) and the triangle inequality imply (A).
+For the converse, denote
+Since (A) implies that
+Theorem 2 with ( fixed but arbitrary in ) implies that converges pointwise for . Therefore, if
+ then, for each , there is an such that
+For each , choose . Then
+so (A), (C), and the triangle inequality imply that
+1.8.8 https://math.libretexts.org/@go/page/17329
+4. From Definition 3, converges uniformly on if and only if and both converge uniformly on
+, where . From Theorems 4 and Theorem 5, this is true if and only if, for any there are points and in such
+that
+and
+These conditions are independent of .
+5. (a) If on then
+so the Cauchy convergence theorems imply the conclusion.
+Define on by
+Then
+Therefore does not satisfy the requirements of Cauchy’s convergence theorems.
+6. In all parts denotes the given integral.
+. If let ; then . If and , choose so that . Then
+ if , so converges uniformly on if .
+ if . If let ; then . If and , choose so that . Then
+ if , so converges uniformly on if .
+ if . If let ; then . If and , we can choose so that
+. Then if , so converges uniformly on if .
+Since , it suffices to assume that . If then . From Example 3.4.14 (p. 162), this
+integral converges conditionally. If and , we can choose so that , so converges uniformly on
+ if
+If then . If , we can choose so that and .
+Then
+so converges uniformly on if .
+1.8.9 https://math.libretexts.org/@go/page/17329
+ if . If , let ; then . If and , we can choose so that
+, so converges uniformly on if .
+7. Theorem 7 (Weierstrass’s Test for Absolute Uniform Convergence II) Suppose is locally integrable and, for
+some
+where
+Then converges absolutely uniformly on
+Denote . By definition, for each there is an such that
+Therefore, if , then
+This and (A) imply that
+Now Theorem 5 implies the stated conclusion.
+ if and .
+, where
+are both improper integrals. Since
+If and , then
+so converges absolutely uniformly on . Since ,
+ converges absolutely uniformly on .
+If then for all and , since .
+, if and , and if .
+If then for all , and .
+1.8.10 https://math.libretexts.org/@go/page/17329
+If then and .
+If then and .
+If then and .
+If then and .
+9. (a) If then . Therefore, since if , converges uniformly on if
+, by Theorem 7. If then if . Therefore, since , converges
+uniformly on for every , by Theorem 6. Hence, converges uniformly on if .
+If then
+Therefore
+is true when . Now suppose it is true for given positive integer , and replace by in (A):
+Substituting this into (B) yields
+which completes the induction.
+If with then and we can compute from the definition in part (a):
+Then we can define by (B).
+The assertion is true if , since
+If for some , then
+which completes the induction proof.
+The change of variable yields
+from the definition of the Gamma function.
+Since is monotonic with respect to ,
+1.8.11 https://math.libretexts.org/@go/page/17329
+From Assumption (a) of Theorem 8, if there is an such that
+Therefore, (A) implies that
+Now Theorem 4 implies that converges uniformly on , which is assumption (c) of Theorem 8.
+) If and are continuous on then
+converges uniformly on if the following conditions are satisfied:
+()0pt0pt14pt 8pt22pt0pt
+There is a constant such that
+ converges uniformly on .
+If
+then integration by parts yields
+Therefore, since assumption (b) and (A) imply that , ,
+on . Now suppose . From assumption (a), there is an such that on if . From
+assumption (c) and Theorem 5, there is an such that
+Therefore (B) implies that
+Now Theorem 5 implies the stated conclusion.
+Denote and, with ,
+1.8.12 https://math.libretexts.org/@go/page/17329
+Therefore
+Now Theorem 4 implies that converges uniformly on if .
+(b) Denote and, with ,
+Therefore
+Now Theorem 4 implies that converges uniformly on if .
+(c) Denote , and, with ,
+so
+Now Theorem 4 implies that converges uniformly on if .
+(d) Denote , and, with ,
+so
+Now Theorem 4 implies that converges uniformly on if .
+13. Integration by parts yields
+so
+Now suppose . From our first assmption, there is an such that
+1.8.13 https://math.libretexts.org/@go/page/17329
+Since converges uniformly on , Theorem 4 implies that there is an such that
+Therefore,
+Now Theorem 4 implies that converges uniformly on .
+14. Theorem 10 If is continuous on and
+converges uniformly on then is continuous on Moreover
+We will first show that in (A) is continuous on . Since converges uniformly on , Definition 1 implies that if , there
+is an such that
+Therefore, if and are in , then
+so
+Since is uniformly continuous on the compact set (Corollary 5.2.14, p. 314), there is a such that
+if and are in and . This and (C) imply that
+if and are in and . Therefore is continuous on , so the integral on left side of (B) exists. Denote
+We will show that the improper integral on the right side of (B) converges to . To this end, denote
+Since we can reverse the order of integration of the continuous function over the rectangle (Corollary 7.2.2, p. 466),
+1.8.14 https://math.libretexts.org/@go/page/17329
+From this and (D),
+Now suppose . Since converges uniformly on , there is an such that
+so , . Hence,
+which completes the proof of (B).
+15. Theorem 11 Let and be continuous on and suppose that
+converges for some and
+converges uniformly on Then converges uniformly on and is given explicitly by
+Moreover, is continuously differentiable on and
+where and are derivatives from the right, and and are derivatives from the left
+Let
+Since and are continuous on , Theorem 1 implies that
+Therefore
+Therefore,
+1.8.15 https://math.libretexts.org/@go/page/17329
+Now suppose . Since we have assumed that exists, there is an in such that
+Since we have assumed that converges for , there is an such that
+Therefore, (B) yields
+if and . Therefore converges uniformly on and
+Since is continuous on by Theorem 10, (A) follows from differentiating this (Theorem 3.3.11, p. 141).
+16. Since
+Theorems 6 and 7 imply that and converge uniformly on , so Theorem 10 implies that
+ and are continuous on .
+If , integrating by parts yields
+and
+since . From Exercise [exer:17] with replaced by , and are continuous on
+. Therefore and are continuous on .
+To see that and are not necessarily continuous at , let and , so
+Then
+If make the change of variable to see that
+and
+1.8.16 https://math.libretexts.org/@go/page/17329
+Therefore , so is not continuous at . Since and , is not
+continuous at .
+The integral diverges if . If substitute to obtain
+so converges for all . To test for uniform convergence, suppose and . Then
+if . If there is an such that . Therefore if . Now Theorem 4 implies
+that converges uniformly on if .
+To evaluate
+we note that
+Therefore
+where the second equality is valid because of the uniform convergence of on the closed interval with endpoints and , and
+the third equality follows from (A).
+ is a proper integral if and it diverges if . If , then
+is convergent. Since
+and
+it follows that
+Therefore, Theorem 5 implies that converges uniformly on if .
+Now Theorem 11 implies that
+. Since
+1.8.17 https://math.libretexts.org/@go/page/17329
+Theorem 4 (or Theorem 6) implies that converges uniformly on if . Therefore, Theorem implies that if , then
+. Since
+Theorem 4 (or Theorem 6) implies that converges uniformly on every if . Therefore, if , then Theorem 11
+implies that
+(e) . Since
+Theorem 4 (or Theorem 6) implies that converges uniformly on if . Therefore Theorem 11 implies that
+. Since
+Theorem 4 (or Theorem 6) implies that converges uniformly on if . Therefore Theorem 11 implies that
+19. (a) We start with
+Formally differentiating this yields
+To justify this we will show by induction that the improper integrals
+converge uniformly on if . We begin with :.
+1.8.18 https://math.libretexts.org/@go/page/17329
+so converges uniformly on if . Now suppose that converges uniformly on . Integrating by
+parts yields
+Letting yields
+Since the integral on the right converges, it follows that the integral on the left converges; in fact
+We must still show that the integral on the left converges uniformly on if
+. To this end, note from (C) that
+if , Now suppose . Since , there is an such that
+Since is uniformly convergent (by our induction assumption), there is such that
+Now (D) implies that
+This, Theorem 11, and an easy induction argument imply (B).
+(b) Substituting yields
+Formally differentiating this yields yields
+Theorem 11 implies that the formal differentiation is legitimate, since, if and , then
+hence, the improper integrals , , , , … converge uniformly on .
+1.8.19 https://math.libretexts.org/@go/page/17329
+Denote . Then
+Since
+if , we can differentiate formally with respect to to obtain
+(d) Denote
+Formally differentiating this yields . There are two improper integrals here: and
+. If then
+Therefore converges uniformly on . If and then
+Since
+Theorem 7 implies that converges uniformly on . Therefore, if then converges uniformly on
+. Now Theorem 11 implies that
+However, since , we know that . This and (A) imply that .
+20. Here , so Theorem 11 implies that
+since the integral on the right converges uniformly on , by Theorem 6.
+Integration by parts yields
+1.8.20 https://math.libretexts.org/@go/page/17329
+From this and (A), , so , , and . Since
+ (Example 12), .
+Here , so Theorem 11 implies that
+since the integral on the right converges uniformly on . Integrating this by parts yields
+so , , and . Therefore, since , .
+22. Theorems 6 and 11 imply that and are times continuously differentiable on if .
+23. We will show first that
+converge uniformly on if . Note that if , then , , , ,… . If
+, then
+Henceforth is fixed. Our assumptions imply that if and then there is an such that
+Therefore (A) implies that
+Now Theorem 4 implies that , ,…, converge uniformly on . Since every is in such an interval,
+Theorem 11 now implies that that if then
+A similar argument applies to , ,… .
+Let . Assume for the moment that . Substituting yields
+Therefore, since for all , , . In fact, since , we can write
+, . Therefore, Theorem 4 implies that converges uniformly on every finite interval.
+Now denote . substituting yields , so for all . Since
+, it follows that for all , so the answer to the question is “no.”
+Let be the induction assumption
+1.8.21 https://math.libretexts.org/@go/page/17329
+which is true by the definition of for . If is true, then Theorems 11 and 13 imply that
+so implies , which completes the induction proof.
+Let . If then
+(integration by parts). Since , (A) implies that
+Now suppose . Since , there is an such that if ; hence, from (B),
+then
+Since is fixed, we can let to conclude that , which implies that .
+If then
+Since
+Theorem 6 implies the stated conclusion.
+In Theorem 13 we assumed only that is bounded; here we are assuming that is convergent.
+Let
+Then
+since converges. Since is continuous on , . Integration by parts yields
+Therefore
+1.8.22 https://math.libretexts.org/@go/page/17329
+so (A) implies that converges uniformly on .
+From Theorem 13, converges for all . Denote , . Then
+(integration by parts). Since ,
+If there is an such that if . Therefore, if then
+Hence . Since is arbitrary, this implies that
+.
+The assumptions of Exercise 28 imply that converges for every . Since
+we can apply the result of Exercise 30 with replaced by , to conclude that
+If , then on for some . If , there is an such that
+If , then
+Therefore, since ,
+1.8.23 https://math.libretexts.org/@go/page/17329
+This and (A) imply that
+Therefore,
+Since is arbitrary, this implies that
+From Exercise 18(d), From Exercise 30, letting yields
+Integrating by parts yields
+Suppose . Since , . Therefore converges uniformly to zero on .
+Since
+it follows that converges to zero uniformly on . Since this implies that converges uniformly
+on , (A) implies that converges uniformly on .
+(b) In this case let , so . Since for all , the hypotheses stated in (a) hold with
+. Therefore converges uniformly on if .
+33. We will first show that converges. Denote . Since is convergent; say ,
+. If then
+Therefore
+so Theorem 2 implies that converge when . Therefore Exercise 27 implies that it converges
+uniformly on , Therefore Theorem 10 implies that
+From Exercise 30 (with replaced by ), , which implies the stated conclusion.
+1.8.24 https://math.libretexts.org/@go/page/17329
+This page titled 1.8: Improper Functions (Exercises) is shared under a CC BY-NC-SA 3.0 license and was authored, remixed, and/or curated by
+William F. Trench via source content that was edited to the style and standards of the LibreTexts platform.
+1 https://math.libretexts.org/@go/page/39010
+Index
+D
+Dirichlet’s Tests
+1.5: Dirichlet’s Tests
+Glossary
+Sample Word 1 | Sample Definition 1
+1 https://math.libretexts.org/@go/page/126559
+Detailed Licensing
+Overview
+Title: Functions Defined by Improper Integrals (Trench)
+Webpages: 19
+Applicable Restrictions: Noncommercial
+All licenses found:
+Undeclared: 52.6% (10 pages)
+CC BY-NC-SA 3.0: 47.4% (9 pages)
+By Page
+Functions Defined by Improper Integrals (Trench) - CC BYNC-SA 3.0
+Front Matter - Undeclared
+TitlePage - Undeclared
+InfoPage - Undeclared
+Table of Contents - Undeclared
+Licensing - Undeclared
+1: Chapters - Undeclared
+1.1: Introduction to Improper Functions - CC BY-NCSA 3.0
+1.2: Preparation - CC BY-NC-SA 3.0
+1.3: Uniform convergence of improper integrals - CC
+BY-NC-SA 3.0
+1.4: Absolutely Uniformly Convergent Improper
+Integrals - CC BY-NC-SA 3.0
+1.5: Dirichlet’s Tests - CC BY-NC-SA 3.0
+1.6: Consequences of Uniform Convergence - CC BYNC-SA 3.0
+1.7: Applications to Laplace transforms - CC BY-NCSA 3.0
+1.8: Improper Functions (Exercises) - CC BY-NC-SA
+3.0
+Back Matter - Undeclared
+Index - Undeclared
+Glossary - Undeclared
+Detailed Licensing - Undeclared

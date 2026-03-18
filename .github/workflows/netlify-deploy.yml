@@ -1,0 +1,37 @@
+# .github/workflows/netlify-deploy.yml
+name: Deploy Web to Netlify
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "web/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Build (if needed)
+        working-directory: web
+        run: |
+          npm install || true
+          npm run build || true
+
+      - name: Deploy
+        working-directory: web
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          netlify deploy --dir=. --prod --message "Auto deploy from GitHub Actions"
